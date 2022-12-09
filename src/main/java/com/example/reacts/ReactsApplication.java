@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ReactsApplication {
 
     public static void main(String[] args) {
-        System.out.println("이이이이이수후나");
         SpringApplication.run(ReactsApplication.class, args);
     }
 
