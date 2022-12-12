@@ -20,6 +20,7 @@ public class BoardTests {
 
     @Test
     public void save(){
+        
         Board params = Board.builder()
                 .title("1번게시글")
                 .deleteYn("N")
