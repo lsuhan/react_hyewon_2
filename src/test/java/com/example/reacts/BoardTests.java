@@ -2,7 +2,6 @@ package com.example.reacts;
 
 import com.example.reacts.board.Board;
 import com.example.reacts.board.BoardRepository;
-import com.example.reacts.user.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +20,8 @@ public class BoardTests {
 
     @Test
     public void save(){
-        User user = User.builder().id(1L).build();
         Board params = Board.builder()
                 .title("1번게시글")
-                .creatorId(user)
                 .deleteYn("N")
                 .createDate(new Timestamp(System.currentTimeMillis()))
                 .updateDate(new Timestamp(System.currentTimeMillis())).build();

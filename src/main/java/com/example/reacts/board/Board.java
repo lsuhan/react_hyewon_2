@@ -1,6 +1,5 @@
 package com.example.reacts.board;
 
-import com.example.reacts.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.mapping.Collection;
@@ -19,16 +18,14 @@ public class Board {
     private Long id;
     @Column
     private String title;
+    @Column
+    private String type;
     @Column(name = "delete_yn")
     private String deleteYn;
     @Column(name = "create_date")
     private Timestamp createDate;
     @Column(name = "update_date")
     private Timestamp updateDate;
-    @ManyToOne
-    @JoinColumn(name = "creator_id", referencedColumnName = "id")
-    private User creatorId;
-
 
 
 
