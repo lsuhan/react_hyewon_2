@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @RunWith(SpringRunner.class)
@@ -20,12 +21,12 @@ public class BoardTests {
 
     @Test
     public void save(){
-        
+
         Board params = Board.builder()
                 .title("1번게시글")
                 .deleteYn("N")
-                .createDate(new Timestamp(System.currentTimeMillis()))
-                .updateDate(new Timestamp(System.currentTimeMillis())).build();
+                .createDate(Timestamp.valueOf(LocalDateTime.now()))
+                .updateDate(Timestamp.valueOf(LocalDateTime.now())).build();
 
         boardRepository.save(params);
 
